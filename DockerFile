@@ -1,0 +1,5 @@
+FROM openjdk:8
+COPY target/Config-server.jar Config-server.jar
+EXPOSE 8888
+#ENV SPRING_PROFILES_ACTIVE prod
+ENTRYPOINT ["java","-jar","Config-server.jar"]
